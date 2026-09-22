@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fly-brain-codex-lab-luhome"
+version = "0.1.0"
+description = "Experimental text -> Codex semantic vector -> fruit-fly connectome bridge"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+brain = [
+  "flybrain>=0.1.0,<0.2",
+]
+dev = [
+  "pytest>=8.0",
+]
+
+[project.scripts]
+text-fly-bridge = "fly_codex_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
