@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SemanticVector",
+  "type": "object",
+  "properties": {
+    "reward": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+    "threat": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+    "novelty": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+    "arousal": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+    "approach": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+    "avoidance": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+    "motion": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+    "uncertainty": { "type": "number", "minimum": 0.0, "maximum": 1.0 }
+  },
+  "required": [
+    "reward",
+    "threat",
+    "novelty",
+    "arousal",
+    "approach",
+    "avoidance",
+    "motion",
+    "uncertainty"
+  ],
+  "additionalProperties": false
+}
